@@ -4,12 +4,28 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        String stringaPariDispari = "gatto";
+        if (stringaPariDispari.length() % 2 == 0) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+
+        int annoBisestile = 1997;
+        System.out.println(verificaAnnoBisestile(annoBisestile));
+
+
+        }
+        public static boolean verificaAnnoBisestile(int annoBisestile) {
+        if (annoBisestile % 4 == 0) {
+            return true;
+        }  if (annoBisestile % 100 == 0 ) {
+            annoBisestile %= 400;
+            return true;
+        } else {
+            return false;
+            }
         }
     }
-}
